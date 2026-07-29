@@ -29,19 +29,19 @@ JavaScript
 Estrutura do projeto
 bash
 src/
-├── assets/
-│   ├── images/
-│   └── icons/
-├── components/
-│   ├── layout/
-│   ├── sections/
-│   └── ui/
-├── data/
-├── hooks/
-├── utils/
-├── styles/
-├── App.jsx
-└── main.jsx
+  assets/
+    images/
+    icons/
+  components/
+    layout/
+    sections/
+    ui/
+  data/
+  hooks/
+  utils/
+  styles/
+  App.jsx
+  main.jsx
 A estrutura foi pensada para manter o projeto modular, facilitando manutenção, reutilização de componentes e crescimento futuro da aplicação.
 
 Funcionalidades esperadas
