@@ -1,0 +1,22 @@
+{
+  "name": "emidiotransportes",
+  "version": "1.0.0",
+  "description": "Landing Page - Transporte Escolar\r Landing page responsiva desenvolvida em React e Tailwind CSS para divulgação de um serviço de transporte escolar, com foco em segurança, credibilidade e contato com pais e responsáveis.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^5.4.21"
+  }
+}
