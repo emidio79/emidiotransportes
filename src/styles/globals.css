@@ -1,5 +1,19 @@
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+/* Carrega todas as camadas e utilitários do Tailwind CSS. */
+@import "tailwindcss";
+
+/*
+  Cria tokens de fonte que podem ser usados nas classes do Tailwind.
+  Exemplo: font-display e font-body.
+*/
+@theme {
+  --font-display: "Outfit", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* Faz os links internos, como #sobre e #contato, rolarem suavemente. */
+html {
+  scroll-behavior: smooth;
+
+  /* Evita que o header fixo cubra o título da seção ao navegar por âncora. */
+  scroll-padding-top: 5rem;
 }
