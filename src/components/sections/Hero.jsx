@@ -1,8 +1,38 @@
+import { useEffect, useState } from 'react'
 import Button from '../ui/Button'
 import { heroHighlights } from '../../data/services'
 import { whatsappLink } from '../../utils/whatsapp'
+import Carrosan from '../../assets/images/carro-san.jpeg'
+import Carrokaua from '../../assets/images/carro-kaua.jpeg'
+
+const imagens = [Carrosan, Carrokaua]
 
 function Hero() {
+  const [imagemAtual, setImagemAtual] = useState(0)
+const [animando, setAnimando] = useState(false)
+
+useEffect(() => {
+  if (animando) return
+
+  const timer = setTimeout(() => {
+    setAnimando(true)
+  }, 4000)
+
+  return () => clearTimeout(timer)
+}, [imagemAtual, animando])
+
+useEffect(() => {
+  if (!animando) return
+
+  const proximaImagem = (imagemAtual + 1) % imagens.length
+
+  const timer = setTimeout(() => {
+    setImagemAtual(proximaImagem)
+    setAnimando(false)
+  }, 1000)
+
+  return () => clearTimeout(timer)
+}, [animando, imagemAtual])
   return (
     <section id="inicio" className="bg-gradient-to-br from-amber-50 via-white to-white py-16 md:py-20">
       <div className="mx-auto grid w-[min(1140px,calc(100%-40px))] items-center gap-12 lg:grid-cols-[1.05fr_.95fr]">
@@ -25,15 +55,41 @@ function Hero() {
         </div>
 
         <div className="relative mx-auto min-h-[330px] w-[min(100%,520px)] sm:min-h-[410px]">
-          <div className="absolute -left-2 -top-3 z-10 rounded bg-white px-3 py-2 text-[11px] font-bold shadow-lg">Seu filho em boas mãos <span className="text-red-500">♥</span></div>
-          <div className="absolute left-3 top-2 flex h-[calc(100%-16px)] w-[calc(100%-16px)] flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-yellow-300 to-yellow-600 text-center shadow-[16px_18px_0_#181818]">
-            <span className="z-10 bg-zinc-950 px-2 py-1 text-[10px] font-bold tracking-[.13em] text-white">FOTO DO VEÍCULO</span>
-            <div className="z-10 mt-6 flex h-24 w-56 items-end gap-2 rounded-[25px_25px_7px_7px] border-[7px] border-zinc-950 bg-amber-50 px-4 pb-2">
-              <i className="h-7 w-7 rounded-full bg-zinc-950" /><i className="mb-7 h-10 w-10 rounded border-4 border-zinc-950 bg-sky-200" /><i className="mb-7 h-10 w-10 rounded border-4 border-zinc-950 bg-sky-200" /><i className="h-7 w-7 rounded-full bg-zinc-950" />
+          <div className="absolute -left-2 -top-3 z-30 rounded bg-white px-3 py-2 text-[15px] font-bold shadow-lg">Nossos Veículos <span className="text-red-500">🚗</span></div>
+          <div className="absolute left-3 top-2 z-0 h-[calc(100%-16px)] w-[calc(100%-16px)]">
+            {/* Próxima foto: fundo → frente */}
+            <div
+              key={imagens[(imagemAtual + 1) % imagens.length]}
+              className={`absolute h-full w-full overflow-hidden rounded-xl transition-all duration-[1000ms] ease-out ${
+                animando
+                  ? 'left-0 top-0 z-20 rotate-0'
+                  : 'left-4 top-4 z-0 rotate-3'
+              }`}
+            >
+              <img
+                src={imagens[(imagemAtual + 1) % imagens.length]}
+                alt="Próximo veículo de transporte escolar"
+                className="h-full w-full object-cover"
+              />
             </div>
-            <p className="z-10 mt-4 max-w-[220px] text-xs leading-relaxed text-yellow-950">Substitua este bloco por uma foto real e bem iluminada do veículo.</p>
+
+            {/* Foto atual: frente → fundo simultaneamente */}
+            <div
+              key={imagens[imagemAtual]}
+              className={`absolute h-full w-full overflow-hidden rounded-xl transition-all duration-[1000ms] ease-out ${
+                animando
+                  ? 'left-4 top-4 z-10 rotate-3'
+                  : 'inset-0 z-10 rotate-0'
+              }`}
+            >
+              <img
+                src={imagens[imagemAtual]}
+                alt="Veículo de transporte escolar"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
-          <div className="absolute -bottom-1 -right-2 z-10 rounded bg-white px-3 py-2 shadow-lg"><strong className="block font-display text-base text-yellow-800">SMTT</strong><span className="block text-[9px] text-zinc-500">Serviço regularizado</span></div>
+          <div className="absolute -bottom-1 -right-2 z-30 rounded bg-white px-3 py-2 shadow-lg"><strong className="block font-display text-base text-yellow-800">SMTT</strong><span className="block text-[9px] text-zinc-500">Serviço regularizado</span></div>
         </div>
       </div>
     </section>
