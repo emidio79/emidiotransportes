@@ -5,5 +5,4 @@ export const navItems = [
   ['Rotas', 'rotas'],
   ['Depoimentos', 'depoimentos'],
   ['Dúvidas', 'faq'],
-  ['Veículos', 'Vehicles'],
 ]

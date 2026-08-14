@@ -2,7 +2,8 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
 import About from './components/sections/About'
-import Vehicles from './components/sections/Vehicles'
+import TiaAndrea from './components/sections/TiaAndrea'
+import TioSan from './components/sections/TioSan'
 import Safety from './components/sections/Safety'
 import Coverage from './components/sections/Coverage'
 import Benefits from './components/sections/Benefits'
@@ -18,7 +19,8 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Vehicles />
+        <TiaAndrea />
+        <TioSan />
         <Safety />
         <Coverage />
         <Benefits />
