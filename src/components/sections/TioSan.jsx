@@ -1,5 +1,8 @@
 import tioSanImage from '../../assets/images/tio-san.png'
 import { rotasan, escolasan} from '../../data/services'
+import { WHATSAPP_TIO_SAN } from '../../utils/constants'
+import { whatsappLinkFor } from '../../utils/whatsapp'
+
 function TioSan() {
   return (
     <section id="TioSan" className="bg-stone-50 py-20 md:py-28">
@@ -28,6 +31,19 @@ function TioSan() {
             San acompanha os alunos para que cheguem à escola e retornem
             para casa com segurança.
           </p>
+          <a
+            href={whatsappLinkFor(
+              WHATSAPP_TIO_SAN,
+              'Olá, Tio San! Gostaria de saber mais sobre o transporte escolar.'
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Falar com o Tio San pelo WhatsApp"
+            className="mt-7 inline-flex w-fit items-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#1ebe5d] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black"
+          >
+            <span className="text-lg leading-none">◉</span>
+            Falar com o Tio San
+          </a>
 
           <div className="mt-10">
             <p className="mb-4 text-xs font-bold tracking-[.13em] text-yellow-400">
