@@ -54,9 +54,9 @@ export const benefits = [
 ]
 
 export const stats = [
-  ['[X]+', 'anos de experiência'],
-  ['[X]+', 'famílias atendidas'],
-  ['[X]', 'rotas organizadas'],
+  ['14+', 'anos de experiência'],
+  ['45+', 'famílias atendidas'],
+  ['6', 'rotas organizadas'],
 ]
 
 export const heroHighlights = [
@@ -65,16 +65,32 @@ export const heroHighlights = [
   ['♥', 'Atenção em', 'cada trajeto'],
 ]
 
-export const neighborhoods = [
-  '[BAIRRO 01]',
-  '[BAIRRO 02]',
-  '[BAIRRO 03]',
-  'Novas rotas sob consulta',
+export const rotasan = [
+  'Aruana',
+  'Atalaia',
+  'Aeroporto',
+  'Inácio Barbosa',
+  'Jardins',
 ]
 
-export const schools = [
-  '[ESCOLA 01]',
-  '[ESCOLA 02]',
-  '[ESCOLA 03]',
-  'Lista em atualização',
+export const escolasan = [
+  'Módulo',
+  'Jardins (Sede)',
+  'Coesi',
+  'Sesi Augusto Franco',
+]
+
+export const rotandrea = [
+  'Aruana',
+  'Atalaia',
+  'Aeroporto',
+]
+
+export const escolandrea = [
+  'Aprendiz',
+  'Celebridades',
+  'Manaim',
+  'Jardins Go',
+  'Jardins Up',
+  'Plataforma Baby',
 ]

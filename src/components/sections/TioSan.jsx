@@ -1,5 +1,5 @@
 import tioSanImage from '../../assets/images/tio-san.png'
-import { neighborhoods, schools} from '../../data/services'
+import { rotasan, escolasan} from '../../data/services'
 function TioSan() {
   return (
     <section id="TioSan" className="bg-stone-50 py-20 md:py-28">
@@ -44,8 +44,8 @@ function TioSan() {
                   Bairros atendidos
                 </h4>
 
-                <ul className="mt-5 space-y-3 text-sm text-zinc-500">
-                  {neighborhoods.map((item) => (
+                <ul className="mt-5 space-y-3 text-sm text-zinc-500 columns-2 gap-4">
+                  {rotasan.map((item) => (
                     <li key={item}>✓ {item}</li>
                   ))}
                 </ul>
@@ -56,8 +56,8 @@ function TioSan() {
                   Escolas atendidas
                 </h4>
 
-                <ul className="mt-5 space-y-3 text-sm text-zinc-500">
-                  {schools.map((item) => (
+                <ul className="mt-5 space-y-3 text-sm text-zinc-500 columns-2 gap-4">
+                  {escolasan.map((item) => (
                     <li key={item}>✓ {item}</li>
                   ))}
                 </ul>
