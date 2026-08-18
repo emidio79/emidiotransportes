@@ -1,5 +1,5 @@
 import tiaAndreaImage from '../../assets/images/tia-andrea.png'
-import { neighborhoods, schools} from '../../data/services'
+import { rotandrea, escolandrea} from '../../data/services'
 function TiaAndrea() {
   return (
     <section id="TiaAndrea" className="bg-black py-20 md:py-28">
@@ -45,7 +45,7 @@ function TiaAndrea() {
                 </h4>
 
                 <ul className="mt-5 space-y-3 text-sm text-zinc-500">
-                  {neighborhoods.map((item) => (
+                  {rotandrea.map((item) => (
                     <li key={item}>✓ {item}</li>
                   ))}
                 </ul>
@@ -56,8 +56,8 @@ function TiaAndrea() {
                   Escolas atendidas
                 </h4>
 
-                <ul className="mt-5 space-y-3 text-sm text-zinc-500">
-                  {schools.map((item) => (
+                <ul className="mt-5 space-y-3 text-sm text-zinc-500 columns-2 gap-4">
+                  {escolandrea.map((item) => (
                     <li key={item}>✓ {item}</li>
                   ))}
                 </ul>
