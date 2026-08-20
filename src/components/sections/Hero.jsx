@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Button from '../ui/Button'
 import { heroHighlights } from '../../data/services'
-import { whatsappLink } from '../../utils/whatsapp'
 import Carrosan from '../../assets/images/carro-san.jpeg'
 import Carrokaua from '../../assets/images/carro-kaua.jpeg'
 
@@ -41,7 +40,7 @@ useEffect(() => {
           <h1 className="max-w-3xl font-display text-5xl font-bold leading-[.95] tracking-[-.06em] sm:text-6xl lg:text-7xl">Transporte escolar seguro para quem é mais importante.</h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-600">Cuidamos do trajeto dos alunos com responsabilidade, atenção e uma comunicação próxima com cada família.</p>
           <div className="mt-7 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-            <Button href={whatsappLink('Olá! Gostaria de consultar uma vaga no transporte escolar.')}>Consultar vaga <span className="text-lg">→</span></Button>
+            <Button href="#TiaAndrea">Consultar vaga <span className="text-lg">→</span></Button>
             <a href="#como-funciona" className="text-sm font-bold">Como funciona <span className="ml-2 text-lg text-yellow-700">↓</span></a>
           </div>
           <div className="mt-10 flex flex-wrap gap-4 sm:gap-6">

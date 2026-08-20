@@ -2,9 +2,8 @@ import Button from '../ui/Button'
 import { navItems } from '../../data/navigation'
 import { useMenu } from '../../hooks/useMenu'
 import { SERVICE_NAME } from '../../utils/constants'
-import { whatsappLink } from '../../utils/whatsapp'
 
-function Header() {
+function Header({ openWhatsAppSelector }) {
   const { menuOpen, toggleMenu, closeMenu } = useMenu()
 
   return (
@@ -35,7 +34,17 @@ function Header() {
               {label}
             </a>
           ))}
-          <Button href={whatsappLink()} className="mt-2 !px-4 !py-2.5 !text-xs md:mt-0">
+          <Button
+            type="button"
+            onClick={() => {
+              closeMenu()
+
+              openWhatsAppSelector(
+                'Olá! Gostaria de saber mais sobre o transporte escolar.'
+              )
+            }}
+            className="mt-2 !px-4 !py-2.5 !text-xs md:mt-0"
+          >
             Falar no WhatsApp
           </Button>
         </nav>
