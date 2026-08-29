@@ -28,10 +28,10 @@ function FAQ({ openWhatsAppSelector }) {
                 'Olá! Tenho uma dúvida sobre o transporte escolar.'
               )
             }
-            className="mt-6 !px-0 !py-0 !text-sm !font-bold !text-zinc-950 !shadow-none hover:!translate-y-0"
+            className="mt-6 inline-flex items-center justify-center rounded-lg !bg-yellow-400 px-5 py-3 text-sm font-bold !text-zinc-950 shadow-none transition hover:-translate-y-0.5 hover:!bg-yellow-300"
           >
             Tirar dúvida pelo WhatsApp
-            <span className="ml-2 text-lg text-yellow-700">→</span>
+            <span className="ml-2 text-lg leading-none text-yellow-700">→</span>
           </Button>
         </div>
 

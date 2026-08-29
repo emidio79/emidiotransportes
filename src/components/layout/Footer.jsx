@@ -21,17 +21,6 @@ function Footer({ openWhatsAppSelector }) {
           </span>
         </a>
 
-        <button
-          type="button"
-          onClick={() =>
-            openWhatsAppSelector(
-              'Olá! Gostaria de saber mais sobre o transporte escolar.'
-            )
-          }
-          className="text-sm font-bold text-yellow-400"
-        >
-          WhatsApp ↗
-        </button>
       </div>
 
       <div className="mx-auto flex w-[min(1140px,calc(100%-40px))] flex-col gap-2 border-t border-zinc-700 py-5 text-[10px] text-zinc-500 sm:flex-row sm:justify-between">
@@ -39,7 +28,7 @@ function Footer({ openWhatsAppSelector }) {
           © {new Date().getFullYear()} {SERVICE_NAME}. Todos os direitos reservados.
         </span>
 
-        <span>Serviço regularizado pela SMTT</span>
+        <span>Desenvolvido por Kauã Emidio</span>
       </div>
     </footer>
   )
