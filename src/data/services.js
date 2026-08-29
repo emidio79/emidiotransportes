@@ -78,6 +78,7 @@ export const escolasan = [
   'Jardins (Sede)',
   'Coesi',
   'Sesi Augusto Franco',
+  'Inca',
 ]
 
 export const rotandrea = [

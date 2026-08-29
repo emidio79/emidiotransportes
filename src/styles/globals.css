@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 /* Carrega todas as camadas e utilitários do Tailwind CSS. */
 @import "tailwindcss";
 
@@ -6,8 +8,19 @@
   Exemplo: font-display e font-body.
 */
 @theme {
-  --font-display: "Outfit", sans-serif;
-  --font-body: "DM Sans", sans-serif;
+  --font-display: "Manrope", "SF Pro Display", "SF Pro Text", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "SF Pro Text", "SF Pro Display", "Segoe UI", sans-serif;
+}
+
+:root {
+  font-family: "Manrope", "SF Pro Text", "SF Pro Display", "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html, body {
+  font-family: var(--font-body);
 }
 
 /* Faz os links internos, como #sobre e #contato, rolarem suavemente. */
@@ -16,6 +29,20 @@ html {
 
   /* Evita que o header fixo cubra o título da seção ao navegar por âncora. */
   scroll-padding-top: 5rem;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 2s ease,
+    transform 2s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes aparecer-fundo {

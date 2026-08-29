@@ -34,9 +34,8 @@ function Contact({ openWhatsAppSelector }) {
         </Button>
 
         <div className="mt-8 flex flex-col gap-2 text-xs font-bold text-yellow-950 sm:flex-row sm:gap-6">
-          <span>◉ {CITY}</span>
-          <span>◷ [HORÁRIO DE ATENDIMENTO]</span>
-          <span>☎ [TELEFONE]</span>
+          <span>📍 {CITY}</span>
+          <span>☎ 79 9 9969-5339 ou 79 9 9936-0697</span>
         </div>
       </div>
     </section>

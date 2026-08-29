@@ -27,24 +27,10 @@ function TioSan() {
           </h2>
 
           <p className="mt-5 max-w-xl leading-relaxed text-zinc-400">
-            Com carinho, responsabilidade e atenção em cada trajeto, o Tio
-            San acompanha os alunos para que cheguem à escola e retornem
-            para casa com segurança.
+            O Tio Sandick realiza o transporte dos alunos com cuidado, pontualidade e compromisso, 
+            garantindo mais tranquilidade e segurança no caminho entre a casa e a escola.
           </p>
-          <a
-            href={whatsappLinkFor(
-              WHATSAPP_TIO_SAN,
-              'Olá, Tio San! Gostaria de saber mais sobre o transporte escolar.'
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Falar com o Tio San pelo WhatsApp"
-            className="mt-7 inline-flex w-fit items-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#1ebe5d] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black"
-          >
-            <span className="text-lg leading-none">◉</span>
-            Falar com o Tio San
-          </a>
-
+        
           <div className="mt-10">
             <p className="mb-4 text-xs font-bold tracking-[.13em] text-yellow-400">
               ROTAS ATENDIDAS
@@ -79,9 +65,26 @@ function TioSan() {
                 </ul>
               </div>
 
-              <div className="col-span-full grid h-24 place-content-center border-t border-stone-200 bg-stone-50 text-center text-xs text-stone-400">
-                <span className="mb-1 text-xl text-yellow-700">⌖</span>
-                Mapa de rotas em breve
+              <div className="col-span-full border-t border-stone-200 bg-stone-50 px-7 py-8 text-center">
+
+                <p className="mx-auto max-w-md text-sm leading-relaxed text-zinc-500">
+                  Mesmo que não encontre seu bairro ou a escola do seu filho na lista, entre em contato com o Tio San para
+                  verificar a melhor solução.
+                </p>
+
+                <a
+                  href={whatsappLinkFor(
+                    WHATSAPP_TIO_SAN,
+                    'Olá, Tio San! Gostaria de conversar sobre o transporte escolar do meu filho.'
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Falar com o Tio San pelo WhatsApp sobre bairros e escolas"
+                  className="mt-5 inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#1ebe5d] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-stone-50"
+                >
+                  <span className="text-lg leading-none">◉</span>
+                  Falar com o Tio San
+                </a>
               </div>
             </div>
           </div>
